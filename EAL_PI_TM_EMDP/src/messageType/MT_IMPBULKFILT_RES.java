@@ -17,6 +17,10 @@ public class MT_IMPBULKFILT_RES {
 	
 	@XStreamImplicit(itemFieldName = "Data")
 	private List<MT_IMPBULKFILT_RES_DATA> Data;
+
+	@XStreamAlias("ReultMsg")
+	private String ReultMsg;
+	
 	@JSONField(name = "Data")
 	public List<MT_IMPBULKFILT_RES_DATA> getData() {
 		return Data;
@@ -24,6 +28,15 @@ public class MT_IMPBULKFILT_RES {
 
 	public void setData(List<MT_IMPBULKFILT_RES_DATA> data) {
 		Data = data;
+	}
+
+	@JSONField(name = "ReultMsg")
+	public String getReultMsg() {
+		return ReultMsg;
+	}
+
+	public void setReultMsg(String reultMsg) {
+		ReultMsg = reultMsg;
 	}
 	
 }

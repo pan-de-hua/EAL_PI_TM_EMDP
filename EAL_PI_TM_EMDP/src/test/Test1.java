@@ -9,14 +9,14 @@ import java.io.OutputStream;
 
 import com.sap.aii.mapping.api.StreamTransformationException;
 
-import mapping.TRUCKDISPATCHINFOFILT_REQ;
+import mapping.*;
 
 public class Test1 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		TRUCKDISPATCHINFOFILT_REQ jm = new TRUCKDISPATCHINFOFILT_REQ();
-		String src = "d:\\PI\\TRUCKDISPATCHINFOFILT\\1.txt";
+		Mapping_IMPBULKFILT_RES_XML jm = new Mapping_IMPBULKFILT_RES_XML();
+		String src = "d:\\PI\\queryData\\RES1.txt";
 		InputStream in = null;
 		try {
 			in = new FileInputStream(new File(src));
@@ -25,7 +25,7 @@ public class Test1 {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
-		File file = new File("d:\\PI\\TRUCKDISPATCHINFOFILT\\out12.txt");
+		File file = new File("d:\\PI\\queryData\\RES2.txt");
 		OutputStream os = null;
 		try {
 			os = new FileOutputStream(file,true);
